@@ -14,7 +14,7 @@ const pasos = [
       'Elegir la plantilla básica o importar desde un proyecto existente si corresponde.'
     ],
     notas: [
-      'ETS5 guarda automáticamente copias de respaldo en la carpeta del usuario. Aun así, realiza respaldos manuales tras cada sesión.',
+      'ETS5 guarda automáticamente copias de respaldo en la carpeta del usuario. Aún así, realiza respaldos manuales tras cada sesión.',
       'Utiliza un nombre de proyecto que incluya cliente, ubicación y fecha (por ejemplo: "Residencial_Lira_2024").'
     ]
   },
