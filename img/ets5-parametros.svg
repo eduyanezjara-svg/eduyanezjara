@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Parámetros de dispositivo ETS5</title>
+  <desc id="desc">Ilustración de la ventana de parámetros de un actuador en ETS5 con ajustes destacados.</desc>
+  <rect width="640" height="360" fill="#eef2f9" rx="12"/>
+  <rect x="24" y="24" width="592" height="312" fill="#ffffff" stroke="#cfd6e4" stroke-width="2" rx="8"/>
+  <rect x="24" y="24" width="592" height="48" fill="#1b2c44" rx="8 8 0 0"/>
+  <text x="48" y="55" fill="#ffffff" font-family="Inter, Arial" font-size="20" font-weight="600">Actuador 8 canales - Parámetros</text>
+  <rect x="48" y="96" width="240" height="180" fill="#f7faff" stroke="#d5deed" stroke-dasharray="6" rx="10"/>
+  <text x="64" y="126" fill="#36597a" font-family="Inter, Arial" font-size="15" font-weight="600">Canal 1</text>
+  <text x="64" y="154" fill="#2f4868" font-family="Inter, Arial" font-size="13">Modo: Conmutación</text>
+  <text x="64" y="180" fill="#2f4868" font-family="Inter, Arial" font-size="13">Función: Luz principal</text>
+  <rect x="300" y="96" width="264" height="180" fill="#e8f1fb" stroke="#bfd0e7" rx="10"/>
+  <text x="320" y="128" fill="#2f4868" font-family="Inter, Arial" font-size="15" font-weight="600">Asociaciones</text>
+  <rect x="320" y="144" width="224" height="36" fill="#1d71b8" rx="6" opacity="0.9"/>
+  <text x="336" y="166" fill="#ffffff" font-family="Inter, Arial" font-size="14">1/1/10 - Sala estar encendido</text>
+  <rect x="320" y="188" width="224" height="36" fill="#5c6f92" rx="6" opacity="0.9"/>
+  <text x="336" y="210" fill="#ffffff" font-family="Inter, Arial" font-size="14">1/1/11 - Sala estar regulación</text>
+  <rect x="320" y="232" width="224" height="36" fill="#a1b4d6" rx="6" opacity="0.9"/>
+  <text x="336" y="254" fill="#1f2a44" font-family="Inter, Arial" font-size="14">Añadir asociación</text>
+</svg>

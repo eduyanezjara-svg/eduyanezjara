@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Descarga de programación ETS5</title>
+  <desc id="desc">Ilustración de la vista de descarga de ETS5 con progreso y confirmación.</desc>
+  <rect width="640" height="360" fill="#eff3fb" rx="12"/>
+  <rect x="24" y="24" width="592" height="312" fill="#ffffff" stroke="#ccd6e7" stroke-width="2" rx="8"/>
+  <rect x="24" y="24" width="592" height="48" fill="#1c2f48" rx="8 8 0 0"/>
+  <text x="48" y="55" fill="#ffffff" font-family="Inter, Arial" font-size="20" font-weight="600">Descargar hacia dispositivo</text>
+  <rect x="48" y="96" width="220" height="36" fill="#1d71b8" rx="6"/>
+  <text x="64" y="118" fill="#ffffff" font-family="Inter, Arial" font-size="15" font-weight="600">Iniciar descarga</text>
+  <rect x="48" y="152" width="520" height="28" fill="#e6edf8" stroke="#b4c5de" rx="14"/>
+  <rect x="48" y="152" width="360" height="28" fill="#1d71b8" rx="14"/>
+  <text x="312" y="172" fill="#ffffff" font-family="Inter, Arial" font-size="13" font-weight="600">70%</text>
+  <rect x="48" y="204" width="520" height="88" fill="#f7faff" stroke="#d7e1f2" stroke-dasharray="7" rx="10"/>
+  <text x="64" y="230" fill="#2f4868" font-family="Inter, Arial" font-size="15">Dispositivo: Actuador 8 canales (1.1.4)</text>
+  <text x="64" y="256" fill="#5c6f92" font-family="Inter, Arial" font-size="13">Resultado: Descarga correcta</text>
+  <rect x="424" y="256" width="120" height="32" fill="#3ab97a" rx="16"/>
+  <text x="442" y="278" fill="#ffffff" font-family="Inter, Arial" font-size="14" font-weight="600">Listo</text>
+</svg>

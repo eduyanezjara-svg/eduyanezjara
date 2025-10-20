@@ -3,13 +3,14 @@ const pasos = [
     titulo: 'Crear un nuevo proyecto',
     descripcion:
       'Inicia ETS5 y genera un archivo de proyecto vacío definiendo su nombre, ubicación y topología inicial.',
+
     tareas: [
       'Abrir ETS5 y seleccionar "Archivo &gt; Nuevo".',
       'Asignar un nombre descriptivo y la carpeta donde se guardará el proyecto.',
       'Elegir la plantilla básica o importar desde un proyecto existente si corresponde.'
     ],
     notas: [
-      'ETS5 guarda automáticamente copias de respaldo en la carpeta del usuario. Aun así, realiza respaldos manuales tras cada sesión.',
+
       'Utiliza un nombre de proyecto que incluya cliente, ubicación y fecha (por ejemplo: "Residencial_Lira_2024").'
     ]
   },
@@ -17,6 +18,7 @@ const pasos = [
     titulo: 'Configurar la topología',
     descripcion:
       'Define áreas, líneas y direcciones individuales de cada dispositivo conforme al diseño eléctrico y a las reglas KNX.',
+
     tareas: [
       'En la vista Topología, agregar áreas y líneas según la estructura planificada.',
       'Para cada línea, establecer la fuente de alimentación y el repetidor si corresponde.',
@@ -31,6 +33,7 @@ const pasos = [
     titulo: 'Importar catálogos y añadir dispositivos',
     descripcion:
       'Carga en ETS5 los productos KNX necesarios y arrástralos a la topología del proyecto.',
+
     tareas: [
       'En la vista Catálogo, importar los archivos .knxprod de cada fabricante.',
       'Arrastrar los dispositivos desde el catálogo a la línea correspondiente en la topología.',
@@ -45,6 +48,7 @@ const pasos = [
     titulo: 'Crear direcciones de grupo',
     descripcion:
       'Organiza la comunicación entre sensores y actuadores mediante direcciones de grupo jerárquicas.',
+
     tareas: [
       'Cambiar a la vista Direcciones de grupo y crear la estructura de 3 niveles (principal, medio, subgrupo).',
       'Nombrar cada dirección según la función (ej. "Iluminación / Planta baja / Sala estar").',
@@ -59,6 +63,7 @@ const pasos = [
     titulo: 'Configurar parámetros y asociaciones',
     descripcion:
       'Ajusta los parámetros de cada equipo y vincula los objetos de comunicación con las direcciones de grupo.',
+
     tareas: [
       'Abrir la ventana de parámetros de cada dispositivo y seleccionar el modo de funcionamiento adecuado.',
       'Relacionar entradas (pulsadores, sensores) con las direcciones de grupo de salida deseadas.',
@@ -73,6 +78,7 @@ const pasos = [
     titulo: 'Realizar chequeos y compilar',
     descripcion:
       'Valida el proyecto antes de programar, corrigiendo advertencias y generando informes si es necesario.',
+
     tareas: [
       'Ejecutar "Proyecto &gt; Comprobar" para detectar direcciones duplicadas o parámetros incompletos.',
       'Revisar el diagnóstico de la vista "Journal" y solucionar mensajes críticos.',
@@ -87,6 +93,7 @@ const pasos = [
     titulo: 'Descargar programación a los dispositivos',
     descripcion:
       'Conecta la interfaz de programación y transfiere la configuración a cada equipo de la instalación KNX.',
+
     tareas: [
       'Seleccionar la interfaz KNX/IP o USB desde el menú desplegable de la barra superior.',
       'Entrar en modo programación en cada dispositivo (botón de programación físico) y pulsar "Descargar".',
@@ -108,7 +115,7 @@ const renderTimeline = () => {
     const node = template.content.cloneNode(true);
     node.querySelector('.timeline__step').textContent = `Paso ${index + 1}`;
     node.querySelector('.timeline__title').textContent = paso.titulo;
-    node.querySelector('.timeline__description').textContent = paso.descripcion;
+
 
     const tasksList = node.querySelector('.timeline__tasks');
     paso.tareas.forEach((tarea) => {

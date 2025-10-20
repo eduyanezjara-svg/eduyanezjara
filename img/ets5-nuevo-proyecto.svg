@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Ventana de creación de proyecto en ETS5</title>
+  <desc id="desc">Captura ilustrada de la ventana de nuevo proyecto en ETS5 con campos para nombre y ubicación.</desc>
+  <rect width="640" height="360" fill="#f3f6fa" rx="12"/>
+  <rect x="24" y="24" width="592" height="312" fill="#ffffff" stroke="#ced4e0" stroke-width="2" rx="8"/>
+  <rect x="24" y="24" width="592" height="48" fill="#1d3557" rx="8 8 0 0"/>
+  <text x="48" y="55" fill="#ffffff" font-family="Inter, Arial" font-size="20" font-weight="600">Nuevo proyecto KNX</text>
+  <text x="48" y="110" fill="#1d3557" font-family="Inter, Arial" font-size="16" font-weight="600">Nombre del proyecto</text>
+  <rect x="48" y="120" width="360" height="36" fill="#ffffff" stroke="#96b1d8" stroke-width="2" rx="6"/>
+  <text x="60" y="144" fill="#5c6c80" font-family="Inter, Arial" font-size="15">Residencial_Lira_2024</text>
+  <text x="48" y="182" fill="#1d3557" font-family="Inter, Arial" font-size="16" font-weight="600">Ubicación</text>
+  <rect x="48" y="192" width="480" height="36" fill="#ffffff" stroke="#96b1d8" stroke-width="2" rx="6"/>
+  <text x="60" y="216" fill="#5c6c80" font-family="Inter, Arial" font-size="15">C:\\KNX\\Proyectos\\Residencial_Lira_2024</text>
+  <rect x="48" y="252" width="200" height="36" fill="#1d71b8" rx="6"/>
+  <text x="90" y="276" fill="#ffffff" font-family="Inter, Arial" font-size="16" font-weight="600">Crear proyecto</text>
+  <rect x="264" y="252" width="160" height="36" fill="#e9eef6" rx="6"/>
+  <text x="296" y="276" fill="#36597a" font-family="Inter, Arial" font-size="16" font-weight="600">Importar...</text>
+  <rect x="560" y="36" width="32" height="32" fill="#2f4868" rx="6"/>
+  <text x="568" y="58" fill="#ffffff" font-family="Inter, Arial" font-size="22">×</text>
+</svg>
