@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis Liquidaciones de Sueldo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <header class="topbar">
+      <div>
+        <h1>Mis Liquidaciones de Sueldo</h1>
+        <p class="subtitle">Consulta y descarga tus liquidaciones de forma sencilla.</p>
+      </div>
+      <div class="user-card">
+        <div class="avatar" aria-hidden="true">EJ</div>
+        <div>
+          <p class="user-name">Eduardo Yáñez</p>
+          <p class="user-role">Docente de Matemáticas</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="overview">
+        <article class="overview-card">
+          <h2>Total acumulado 2024</h2>
+          <p class="overview-amount" id="total-acumulado">$0</p>
+          <span class="overview-caption">Neto recibido</span>
+        </article>
+        <article class="overview-card">
+          <h2>Última liquidación</h2>
+          <p class="overview-amount" id="ultimo-periodo">Junio 2024</p>
+          <span class="overview-caption" id="ultimo-monto">$0</span>
+        </article>
+        <article class="overview-card">
+          <h2>Promedio mensual</h2>
+          <p class="overview-amount" id="promedio">$0</p>
+          <span class="overview-caption">Basado en los últimos 12 meses</span>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Liquidaciones</h2>
+          <div class="filters">
+            <label class="field">
+              <span>Año</span>
+              <select id="filter-anio" aria-label="Filtrar por año"></select>
+            </label>
+            <label class="field">
+              <span>Buscar</span>
+              <input type="search" id="search" placeholder="Ej: marzo o bono" aria-label="Buscar liquidaciones" />
+            </label>
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="payslip-table">
+            <thead>
+              <tr>
+                <th scope="col">Periodo</th>
+                <th scope="col">Fecha de depósito</th>
+                <th scope="col">Bruto</th>
+                <th scope="col">Neto</th>
+                <th scope="col">Descargar</th>
+              </tr>
+            </thead>
+            <tbody id="payslip-body">
+              <!-- Rendered dynamically -->
+            </tbody>
+          </table>
+          <p class="empty-state" id="empty-state" hidden>No se encontraron liquidaciones para los filtros seleccionados.</p>
+        </div>
+      </section>
+
+      <aside class="details" aria-live="polite">
+        <h2>Detalle de liquidación</h2>
+        <div id="detalle-contenido" class="details-body">
+          <p>Selecciona una liquidación para revisar los montos y conceptos.</p>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p>Portal de liquidaciones &copy; 2024 - Dirección de Recursos Humanos</p>
+  </footer>
+
+  <template id="detalle-template">
+    <article>
+      <header class="details-header">
+        <h3 id="detalle-periodo"></h3>
+        <p class="details-date" id="detalle-fecha"></p>
+      </header>
+      <section class="details-section">
+        <h4>Resumen</h4>
+        <dl class="summary">
+          <div>
+            <dt>Haberes imponibles</dt>
+            <dd id="detalle-bruto"></dd>
+          </div>
+          <div>
+            <dt>Neto a pagar</dt>
+            <dd id="detalle-neto"></dd>
+          </div>
+        </dl>
+      </section>
+      <section class="details-section">
+        <h4>Asignaciones y bonos</h4>
+        <ul id="detalle-asignaciones" class="details-list"></ul>
+      </section>
+      <section class="details-section">
+        <h4>Descuentos</h4>
+        <ul id="detalle-descuentos" class="details-list"></ul>
+      </section>
+      <a id="detalle-descarga" class="download-link" href="#" download>Descargar PDF</a>
+    </article>
+  </template>
+
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>
