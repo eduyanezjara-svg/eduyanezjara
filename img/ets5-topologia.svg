@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Vista de topología ETS5</title>
+  <desc id="desc">Ilustración de la vista de topología en ETS5 con áreas, líneas y dispositivos.</desc>
+  <rect width="640" height="360" fill="#f2f5fb" rx="12"/>
+  <rect x="20" y="20" width="600" height="320" fill="#ffffff" stroke="#d4dae6" stroke-width="2" rx="8"/>
+  <rect x="20" y="20" width="600" height="48" fill="#243b53" rx="8 8 0 0"/>
+  <text x="44" y="51" fill="#ffffff" font-family="Inter, Arial" font-size="20" font-weight="600">Topología</text>
+  <rect x="44" y="86" width="180" height="28" fill="#e5edf6" rx="6"/>
+  <text x="54" y="106" fill="#2f4868" font-family="Inter, Arial" font-size="14">Área 1 - Vivienda</text>
+  <rect x="44" y="126" width="180" height="28" fill="#ffffff" stroke="#c0cee3" rx="6"/>
+  <text x="54" y="145" fill="#2f4868" font-family="Inter, Arial" font-size="13">Línea 1.1 Iluminación</text>
+  <rect x="44" y="162" width="180" height="28" fill="#ffffff" stroke="#c0cee3" rx="6"/>
+  <text x="54" y="181" fill="#2f4868" font-family="Inter, Arial" font-size="13">Línea 1.2 Persianas</text>
+  <rect x="44" y="198" width="180" height="28" fill="#ffffff" stroke="#c0cee3" rx="6"/>
+  <text x="54" y="217" fill="#2f4868" font-family="Inter, Arial" font-size="13">Línea 1.3 Clima</text>
+  <rect x="240" y="86" width="360" height="220" fill="#f8fbff" stroke="#dce4f1" stroke-dasharray="6" rx="8"/>
+  <text x="260" y="118" fill="#3e5c7b" font-family="Inter, Arial" font-size="16" font-weight="600">Dispositivos asignados</text>
+  <rect x="260" y="140" width="144" height="80" fill="#1d71b8" rx="10" opacity="0.85"/>
+  <text x="280" y="170" fill="#ffffff" font-family="Inter, Arial" font-size="14">Actuador 8 canales</text>
+  <rect x="420" y="140" width="144" height="80" fill="#48a9e6" rx="10" opacity="0.85"/>
+  <text x="440" y="170" fill="#ffffff" font-family="Inter, Arial" font-size="14">Regulador LED</text>
+  <rect x="260" y="232" width="144" height="64" fill="#5c6f92" rx="10" opacity="0.85"/>
+  <text x="280" y="268" fill="#ffffff" font-family="Inter, Arial" font-size="14">Fuente 640mA</text>
+  <rect x="420" y="232" width="144" height="64" fill="#1d3557" rx="10" opacity="0.85"/>
+  <text x="440" y="268" fill="#ffffff" font-family="Inter, Arial" font-size="14">Router IP</text>
+</svg>

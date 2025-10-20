@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Direcciones de grupo ETS5</title>
+  <desc id="desc">Ilustración de la vista de direcciones de grupo en ETS5 con estructura jerárquica.</desc>
+  <rect width="640" height="360" fill="#eef3fb" rx="12"/>
+  <rect x="24" y="24" width="592" height="312" fill="#ffffff" stroke="#ccd6e6" stroke-width="2" rx="8"/>
+  <rect x="24" y="24" width="592" height="48" fill="#22344b" rx="8 8 0 0"/>
+  <text x="48" y="55" fill="#ffffff" font-family="Inter, Arial" font-size="20" font-weight="600">Direcciones de grupo</text>
+  <rect x="48" y="92" width="260" height="200" fill="#f8fbff" stroke="#d7e1f1" stroke-dasharray="7" rx="10"/>
+  <text x="64" y="122" fill="#325275" font-family="Inter, Arial" font-size="16" font-weight="600">Iluminación</text>
+  <line x1="72" y1="130" x2="72" y2="264" stroke="#95aac7" stroke-width="3" stroke-linecap="round"/>
+  <line x1="72" y1="152" x2="132" y2="152" stroke="#95aac7" stroke-width="3" stroke-linecap="round"/>
+  <line x1="72" y1="188" x2="132" y2="188" stroke="#95aac7" stroke-width="3" stroke-linecap="round"/>
+  <line x1="72" y1="224" x2="132" y2="224" stroke="#95aac7" stroke-width="3" stroke-linecap="round"/>
+  <text x="140" y="158" fill="#2f4868" font-family="Inter, Arial" font-size="14">Planta baja</text>
+  <text x="140" y="194" fill="#2f4868" font-family="Inter, Arial" font-size="14">Planta alta</text>
+  <text x="140" y="230" fill="#2f4868" font-family="Inter, Arial" font-size="14">Exterior</text>
+  <rect x="328" y="120" width="248" height="156" fill="#1d71b8" rx="12" opacity="0.85"/>
+  <text x="348" y="156" fill="#ffffff" font-family="Inter, Arial" font-size="15">1/1/10 - Sala estar encendido</text>
+  <text x="348" y="184" fill="#d6e9ff" font-family="Inter, Arial" font-size="13">Pulsador doble &rarr; Actuador 8 canales</text>
+  <text x="348" y="212" fill="#d6e9ff" font-family="Inter, Arial" font-size="13">Comentarios: circuito principal</text>
+  <rect x="328" y="96" width="120" height="24" fill="#4a7fb4" rx="6"/>
+  <text x="340" y="114" fill="#ffffff" font-family="Inter, Arial" font-size="13">Jerarquía 3 niveles</text>
+</svg>

@@ -3,123 +3,131 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mis Liquidaciones de Sueldo</title>
+  <title>Guía ETS5 - Crear un Proyecto KNX</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <div class="layout">
-    <header class="topbar">
-      <div>
-        <h1>Mis Liquidaciones de Sueldo</h1>
-        <p class="subtitle">Consulta y descarga tus liquidaciones de forma sencilla.</p>
-      </div>
-      <div class="user-card">
-        <div class="avatar" aria-hidden="true">EJ</div>
-        <div>
-          <p class="user-name">Eduardo Yáñez</p>
-          <p class="user-role">Docente de Matemáticas</p>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="hero__eyebrow">Guía paso a paso</p>
+      <h1>Cómo crear un proyecto KNX en ETS5</h1>
+      <p class="hero__lead">
+        Sigue este recorrido guiado para configurar desde cero un proyecto en ETS5, desde la creación del archivo
+        inicial hasta la descarga de la programación hacia los dispositivos KNX.
+      </p>
+      <a class="hero__cta" href="#pasos">Ver pasos</a>
+    </div>
+    <div class="hero__figure" aria-hidden="true">
+      <div class="hero__diagram">
+        <div class="diagram__node">
+          <span>Topología</span>
+          <small>Líneas &amp; áreas</small>
+        </div>
+        <div class="diagram__node">
+          <span>Dispositivos</span>
+          <small>Interruptores, actuadores</small>
+        </div>
+        <div class="diagram__node">
+          <span>Direcciones<br>de grupo</span>
+          <small>Comunicación</small>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main class="content">
-      <section class="overview">
-        <article class="overview-card">
-          <h2>Total acumulado 2024</h2>
-          <p class="overview-amount" id="total-acumulado">$0</p>
-          <span class="overview-caption">Neto recibido</span>
+  <main class="main">
+    <section class="grid" aria-labelledby="preparacion">
+      <div class="grid__title">
+        <h2 id="preparacion">Antes de comenzar</h2>
+        <p>Comprueba que dispones de todo lo necesario para trabajar con ETS5 y programar tu instalación KNX.</p>
+      </div>
+      <div class="grid__items">
+        <article class="card">
+          <h3>Requisitos técnicos</h3>
+          <ul>
+            <li>Licencia activa de ETS5 con el número de dongle correspondiente.</li>
+            <li>Ordenador con Windows 10 o superior y permisos de administrador.</li>
+            <li>Interfaz de programación KNX (USB, IP o router KNX) conectada a la instalación.</li>
+          </ul>
         </article>
-        <article class="overview-card">
-          <h2>Última liquidación</h2>
-          <p class="overview-amount" id="ultimo-periodo">Junio 2024</p>
-          <span class="overview-caption" id="ultimo-monto">$0</span>
+        <article class="card">
+          <h3>Documentación previa</h3>
+          <ul>
+            <li>Plano eléctrico y topología propuesta (áreas, líneas, dispositivos).</li>
+            <li>Listado de funciones deseadas (iluminación, persianas, climatización, etc.).</li>
+            <li>Datos de catálogo o archivos <code>.knxprod</code> de los equipos a utilizar.</li>
+          </ul>
         </article>
-        <article class="overview-card">
-          <h2>Promedio mensual</h2>
-          <p class="overview-amount" id="promedio">$0</p>
-          <span class="overview-caption">Basado en los últimos 12 meses</span>
+        <article class="card">
+          <h3>Buenas prácticas</h3>
+          <ul>
+            <li>Crear carpetas separadas para copias de seguridad y versiones del proyecto.</li>
+            <li>Definir una nomenclatura consistente para direcciones individuales y de grupo.</li>
+            <li>Documentar comentarios en cada objeto de grupo y dispositivo.</li>
+          </ul>
         </article>
-      </section>
+      </div>
+    </section>
 
-      <section class="panel">
-        <div class="panel-header">
-          <h2>Liquidaciones</h2>
-          <div class="filters">
-            <label class="field">
-              <span>Año</span>
-              <select id="filter-anio" aria-label="Filtrar por año"></select>
-            </label>
-            <label class="field">
-              <span>Buscar</span>
-              <input type="search" id="search" placeholder="Ej: marzo o bono" aria-label="Buscar liquidaciones" />
-            </label>
-          </div>
-        </div>
+    <section class="timeline" aria-labelledby="pasos">
+      <div class="timeline__intro">
+        <h2 id="pasos">Pasos principales</h2>
+        <p>
+          El siguiente flujo detalla el proceso completo dentro de ETS5. Cada paso incluye sub-tareas y notas para
+          evitar errores frecuentes.
+        </p>
+      </div>
+      <ol class="timeline__list" id="timeline"></ol>
+    </section>
 
-        <div class="table-wrapper">
-          <table class="payslip-table">
-            <thead>
-              <tr>
-                <th scope="col">Periodo</th>
-                <th scope="col">Fecha de depósito</th>
-                <th scope="col">Bruto</th>
-                <th scope="col">Neto</th>
-                <th scope="col">Descargar</th>
-              </tr>
-            </thead>
-            <tbody id="payslip-body">
-              <!-- Rendered dynamically -->
-            </tbody>
-          </table>
-          <p class="empty-state" id="empty-state" hidden>No se encontraron liquidaciones para los filtros seleccionados.</p>
-        </div>
-      </section>
-
-      <aside class="details" aria-live="polite">
-        <h2>Detalle de liquidación</h2>
-        <div id="detalle-contenido" class="details-body">
-          <p>Selecciona una liquidación para revisar los montos y conceptos.</p>
-        </div>
-      </aside>
-    </main>
-  </div>
+    <section class="resources" aria-labelledby="recursos">
+      <div class="resources__header">
+        <h2 id="recursos">Recursos útiles</h2>
+        <p>Enlaces y referencias para profundizar más en la plataforma ETS5 y en la tecnología KNX.</p>
+      </div>
+      <div class="resources__grid">
+        <article class="resource">
+          <h3>Guía oficial ETS5</h3>
+          <p>Manual completo de ETS5 con explicaciones del interfaz y funciones avanzadas.</p>
+          <a href="https://support.knx.org/hc/es/articles/360000170424" target="_blank" rel="noopener">Abrir en soporte KNX</a>
+        </article>
+        <article class="resource">
+          <h3>Catálogos de fabricantes</h3>
+          <p>Descarga los archivos <code>.knxprod</code> de los dispositivos para añadirlos a tu catálogo.</p>
+          <a href="https://my.knx.org" target="_blank" rel="noopener">Acceder a MyKNX</a>
+        </article>
+        <article class="resource">
+          <h3>Formación online</h3>
+          <p>Cursos gratuitos y de pago para dominar la programación KNX y la puesta en marcha de proyectos.</p>
+          <a href="https://professionals.knx.org/learning-courses" target="_blank" rel="noopener">Ver cursos disponibles</a>
+        </article>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
-    <p>Portal de liquidaciones &copy; 2024 - Dirección de Recursos Humanos</p>
+    <p>Actualizado 2024 · Elaborado por Especialistas KNX</p>
   </footer>
 
-  <template id="detalle-template">
-    <article>
-      <header class="details-header">
-        <h3 id="detalle-periodo"></h3>
-        <p class="details-date" id="detalle-fecha"></p>
-      </header>
-      <section class="details-section">
-        <h4>Resumen</h4>
-        <dl class="summary">
-          <div>
-            <dt>Haberes imponibles</dt>
-            <dd id="detalle-bruto"></dd>
-          </div>
-          <div>
-            <dt>Neto a pagar</dt>
-            <dd id="detalle-neto"></dd>
-          </div>
-        </dl>
-      </section>
-      <section class="details-section">
-        <h4>Asignaciones y bonos</h4>
-        <ul id="detalle-asignaciones" class="details-list"></ul>
-      </section>
-      <section class="details-section">
-        <h4>Descuentos</h4>
-        <ul id="detalle-descuentos" class="details-list"></ul>
-      </section>
-      <a id="detalle-descarga" class="download-link" href="#" download>Descargar PDF</a>
-    </article>
+  <template id="paso-template">
+    <li class="timeline__item">
+      <div class="timeline__marker" aria-hidden="true"></div>
+      <article class="timeline__card">
+        <header>
+          <p class="timeline__step"></p>
+          <h3 class="timeline__title"></h3>
+        </header>
+        <p class="timeline__description"></p>
+        <ul class="timeline__tasks"></ul>
+        <details class="timeline__notes">
+          <summary>Notas y consejos</summary>
+          <div class="timeline__notes-body"></div>
+        </details>
+      </article>
+    </li>
   </template>
 
   <script src="js/app.js" type="module"></script>

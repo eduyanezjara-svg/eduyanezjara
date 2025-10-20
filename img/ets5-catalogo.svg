@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Catálogo de productos ETS5</title>
+  <desc id="desc">Ilustración de la sección de catálogo de ETS5 mostrando productos importados y el botón de añadir.</desc>
+  <rect width="640" height="360" fill="#edf1f9" rx="12"/>
+  <rect x="26" y="26" width="588" height="308" fill="#ffffff" stroke="#d0d8e6" stroke-width="2" rx="8"/>
+  <rect x="26" y="26" width="588" height="52" fill="#1f2a44" rx="8 8 0 0"/>
+  <text x="48" y="58" fill="#ffffff" font-family="Inter, Arial" font-size="20" font-weight="600">Catálogo de productos</text>
+  <rect x="48" y="96" width="232" height="44" fill="#1d71b8" rx="6"/>
+  <text x="76" y="122" fill="#ffffff" font-family="Inter, Arial" font-size="16" font-weight="600">Importar .knxprod</text>
+  <rect x="304" y="96" width="136" height="44" fill="#eaf0f8" rx="6" stroke="#b5c8e0"/>
+  <text x="320" y="123" fill="#36597a" font-family="Inter, Arial" font-size="15">Actualizar</text>
+  <rect x="48" y="164" width="516" height="140" fill="#f8fbff" stroke="#d4deee" stroke-dasharray="8" rx="10"/>
+  <text x="64" y="190" fill="#36597a" font-family="Inter, Arial" font-size="16" font-weight="600">Productos disponibles</text>
+  <rect x="64" y="206" width="140" height="72" fill="#1d71b8" rx="8" opacity="0.85"/>
+  <text x="84" y="240" fill="#ffffff" font-family="Inter, Arial" font-size="14">Pulsador 4 teclas</text>
+  <rect x="220" y="206" width="140" height="72" fill="#48a9e6" rx="8" opacity="0.85"/>
+  <text x="240" y="240" fill="#ffffff" font-family="Inter, Arial" font-size="14">Sensor presencia</text>
+  <rect x="376" y="206" width="140" height="72" fill="#5c6f92" rx="8" opacity="0.85"/>
+  <text x="396" y="240" fill="#ffffff" font-family="Inter, Arial" font-size="14">Actuador persianas</text>
+</svg>

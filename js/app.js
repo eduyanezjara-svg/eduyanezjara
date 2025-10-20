@@ -1,286 +1,188 @@
-const payslips = [
+const pasos = [
   {
-    id: '2024-06',
-    periodo: 'Junio 2024',
-    fechaDeposito: '30/06/2024',
-    bruto: 1250000,
-    neto: 986000,
-    archivo: '#',
-    asignaciones: [
-      { concepto: 'Horas de aula', monto: 740000 },
-      { concepto: 'Horas extraordinarias', monto: 120000 },
-      { concepto: 'Bono desempeño PME', monto: 90000 }
+    titulo: 'Crear un nuevo proyecto',
+    descripcion:
+      'Inicia ETS5 y genera un archivo de proyecto vacío definiendo su nombre, ubicación y topología inicial.',
+    imagen: {
+      src: 'img/ets5-nuevo-proyecto.svg',
+      alt: 'Ventana de ETS5 mostrando la creación de un nuevo proyecto con campos de nombre y ruta.',
+      caption: 'La ventana “Nuevo proyecto KNX” permite definir nombre, carpeta de trabajo e importar plantillas.'
+    },
+    tareas: [
+      'Abrir ETS5 y seleccionar "Archivo &gt; Nuevo".',
+      'Asignar un nombre descriptivo y la carpeta donde se guardará el proyecto.',
+      'Elegir la plantilla básica o importar desde un proyecto existente si corresponde.'
     ],
-    descuentos: [
-      { concepto: 'AFP Habitat', monto: 105000 },
-      { concepto: 'Salud Fonasa', monto: 74000 },
-      { concepto: 'Seguro de cesantía', monto: 21000 }
-    ],
-    notas: 'Incluye retroactivo por ajuste salarial 3%.'
-  },
-  {
-    id: '2024-05',
-    periodo: 'Mayo 2024',
-    fechaDeposito: '30/05/2024',
-    bruto: 1225000,
-    neto: 969500,
-    archivo: '#',
-    asignaciones: [
-      { concepto: 'Horas de aula', monto: 740000 },
-      { concepto: 'Horas extraprogramáticas', monto: 95000 },
-      { concepto: 'Bono asignación excelencia', monto: 88000 }
-    ],
-    descuentos: [
-      { concepto: 'AFP Habitat', monto: 104500 },
-      { concepto: 'Salud Fonasa', monto: 73500 },
-      { concepto: 'Colegiatura sindicato', monto: 14500 }
+    notas: [
+      'ETS5 guarda automáticamente copias de respaldo en la carpeta del usuario. Aun así, realiza respaldos manuales tras cada sesión.',
+      'Utiliza un nombre de proyecto que incluya cliente, ubicación y fecha (por ejemplo: "Residencial_Lira_2024").'
     ]
   },
   {
-    id: '2024-04',
-    periodo: 'Abril 2024',
-    fechaDeposito: '30/04/2024',
-    bruto: 1198000,
-    neto: 948200,
-    archivo: '#',
-    asignaciones: [
-      { concepto: 'Horas de aula', monto: 710000 },
-      { concepto: 'Bono agno escolar', monto: 70000 },
-      { concepto: 'Asignación locomoción', monto: 38000 }
+    titulo: 'Configurar la topología',
+    descripcion:
+      'Define áreas, líneas y direcciones individuales de cada dispositivo conforme al diseño eléctrico y a las reglas KNX.',
+    imagen: {
+      src: 'img/ets5-topologia.svg',
+      alt: 'Vista de topología de ETS5 con áreas, líneas y dispositivos organizados.',
+      caption: 'En la vista Topología organiza áreas, líneas y dispositivos antes de asignar direcciones.'
+    },
+    tareas: [
+      'En la vista Topología, agregar áreas y líneas según la estructura planificada.',
+      'Para cada línea, establecer la fuente de alimentación y el repetidor si corresponde.',
+      'Crear los dispositivos virtuales asignando direcciones individuales únicas (formato A.L.D).'
     ],
-    descuentos: [
-      { concepto: 'AFP Habitat', monto: 103200 },
-      { concepto: 'Salud Fonasa', monto: 72800 },
-      { concepto: 'Mutualidad', monto: 21000 }
+    notas: [
+      'Respeta la regla de un máximo de 64 dispositivos por línea (sin repetidor).',
+      'Si trabajas con routers IP, configura sus direcciones físicas consecutivas para facilitar el diagnóstico.'
     ]
   },
   {
-    id: '2023-12',
-    periodo: 'Diciembre 2023',
-    fechaDeposito: '22/12/2023',
-    bruto: 1380000,
-    neto: 1095000,
-    archivo: '#',
-    asignaciones: [
-      { concepto: 'Horas de aula', monto: 720000 },
-      { concepto: 'Bono de navidad', monto: 250000 },
-      { concepto: 'Horas extra', monto: 125000 }
+    titulo: 'Importar catálogos y añadir dispositivos',
+    descripcion:
+      'Carga en ETS5 los productos KNX necesarios y arrástralos a la topología del proyecto.',
+    imagen: {
+      src: 'img/ets5-catalogo.svg',
+      alt: 'Catálogo de ETS5 con el botón para importar archivos .knxprod y varios dispositivos listados.',
+      caption: 'Utiliza el catálogo para importar archivos .knxprod y tener disponibles los equipos del fabricante.'
+    },
+    tareas: [
+      'En la vista Catálogo, importar los archivos .knxprod de cada fabricante.',
+      'Arrastrar los dispositivos desde el catálogo a la línea correspondiente en la topología.',
+      'Configurar parámetros básicos (tensión de alimentación, número de canales, modo de funcionamiento).'
     ],
-    descuentos: [
-      { concepto: 'AFP Habitat', monto: 118000 },
-      { concepto: 'Salud Fonasa', monto: 84000 },
-      { concepto: 'Crédito social', monto: 37000 }
+    notas: [
+      'Mantén actualizadas las versiones de catálogo para evitar incompatibilidades.',
+      'Usa la función de búsqueda del catálogo para localizar rápidamente actuadores o pulsadores específicos.'
     ]
   },
   {
-    id: '2023-11',
-    periodo: 'Noviembre 2023',
-    fechaDeposito: '30/11/2023',
-    bruto: 1175000,
-    neto: 933000,
-    archivo: '#',
-    asignaciones: [
-      { concepto: 'Horas de aula', monto: 695000 },
-      { concepto: 'Bono asignación excelencia', monto: 82000 },
-      { concepto: 'Movilización', monto: 39000 }
+    titulo: 'Crear direcciones de grupo',
+    descripcion:
+      'Organiza la comunicación entre sensores y actuadores mediante direcciones de grupo jerárquicas.',
+    imagen: {
+      src: 'img/ets5-direcciones.svg',
+      alt: 'Vista de direcciones de grupo en ETS5 con estructura jerárquica de tres niveles.',
+      caption: 'La vista Direcciones de grupo muestra la jerarquía de comunicación entre sensores y actuadores.'
+    },
+    tareas: [
+      'Cambiar a la vista Direcciones de grupo y crear la estructura de 3 niveles (principal, medio, subgrupo).',
+      'Nombrar cada dirección según la función (ej. "Iluminación / Planta baja / Sala estar").',
+      'Relacionar objetos de comunicación de los dispositivos con las direcciones correspondientes.'
     ],
-    descuentos: [
-      { concepto: 'AFP Habitat', monto: 101700 },
-      { concepto: 'Salud Fonasa', monto: 72000 },
-      { concepto: 'Caja de compensación', monto: 21500 }
+    notas: [
+      'Aplica prefijos o códigos para identificar el tipo de función (ILU, PER, CLI).',
+      'Utiliza comentarios en los objetos de grupo para describir escenarios o condiciones especiales.'
+    ]
+  },
+  {
+    titulo: 'Configurar parámetros y asociaciones',
+    descripcion:
+      'Ajusta los parámetros de cada equipo y vincula los objetos de comunicación con las direcciones de grupo.',
+    imagen: {
+      src: 'img/ets5-parametros.svg',
+      alt: 'Ventana de parámetros de un actuador en ETS5 con asociaciones destacadas.',
+      caption: 'Edita parámetros y asociaciones para cada canal asegurando que todos los objetos estén vinculados.'
+    },
+    tareas: [
+      'Abrir la ventana de parámetros de cada dispositivo y seleccionar el modo de funcionamiento adecuado.',
+      'Relacionar entradas (pulsadores, sensores) con las direcciones de grupo de salida deseadas.',
+      'Verificar que no existan objetos sin dirección asignada utilizando el filtro "Objetos no asociados".'
+    ],
+    notas: [
+      'Aprovecha las funciones de copiar/pegar parámetros para equipos iguales.',
+      'Activa la opción "Mostrar objetos" en la vista de direcciones para detectar configuraciones incompletas.'
+    ]
+  },
+  {
+    titulo: 'Realizar chequeos y compilar',
+    descripcion:
+      'Valida el proyecto antes de programar, corrigiendo advertencias y generando informes si es necesario.',
+    imagen: {
+      src: 'img/ets5-chequeo.svg',
+      alt: 'Pantalla de comprobación del proyecto en ETS5 mostrando advertencias resueltas.',
+      caption: 'La herramienta Comprobar proyecto detecta inconsistencias y genera informes antes de la programación.'
+    },
+    tareas: [
+      'Ejecutar "Proyecto &gt; Comprobar" para detectar direcciones duplicadas o parámetros incompletos.',
+      'Revisar el diagnóstico de la vista "Journal" y solucionar mensajes críticos.',
+      'Generar un informe PDF para documentar la configuración final antes de la puesta en marcha.'
+    ],
+    notas: [
+      'Utiliza etiquetas de color para marcar las líneas ya revisadas.',
+      'Guarda una copia del proyecto en formato .knxproj antes de pasar a la programación.'
+    ]
+  },
+  {
+    titulo: 'Descargar programación a los dispositivos',
+    descripcion:
+      'Conecta la interfaz de programación y transfiere la configuración a cada equipo de la instalación KNX.',
+    imagen: {
+      src: 'img/ets5-descarga.svg',
+      alt: 'Progreso de descarga hacia un dispositivo KNX dentro de ETS5.',
+      caption: 'Supervisa el progreso de descarga y confirma que cada dispositivo recibe su programación.'
+    },
+    tareas: [
+      'Seleccionar la interfaz KNX/IP o USB desde el menú desplegable de la barra superior.',
+      'Entrar en modo programación en cada dispositivo (botón de programación físico) y pulsar "Descargar".',
+      'Verificar el resultado de la descarga y repetir en caso de errores de comunicación.'
+    ],
+    notas: [
+      'Mantén la tensión de bus estable durante la descarga para evitar interrupciones.',
+      'Utiliza la descarga parcial cuando solo se modifican algunos dispositivos.'
     ]
   }
 ];
 
-const formatCurrency = (value) =>
-  value.toLocaleString('es-CL', { style: 'currency', currency: 'CLP', maximumFractionDigits: 0 });
-
-const tableBody = document.querySelector('#payslip-body');
-const filterAnio = document.querySelector('#filter-anio');
-const searchInput = document.querySelector('#search');
-const emptyState = document.querySelector('#empty-state');
-
-const totalAcumuladoEl = document.querySelector('#total-acumulado');
-const ultimoPeriodoEl = document.querySelector('#ultimo-periodo');
-const ultimoMontoEl = document.querySelector('#ultimo-monto');
-const promedioEl = document.querySelector('#promedio');
-
-const detalleTemplate = document.querySelector('#detalle-template');
-const detalleContenedor = document.querySelector('#detalle-contenido');
-
-const obtenerAnios = () => {
-  const years = new Set(payslips.map(({ periodo }) => periodo.split(' ')[1]));
-  return Array.from(years).sort((a, b) => b.localeCompare(a));
-};
-
-const renderFiltros = () => {
-  const years = obtenerAnios();
+const renderTimeline = () => {
+  const template = document.querySelector('#paso-template');
+  const list = document.querySelector('#timeline');
   const fragment = document.createDocumentFragment();
 
-  const optionTodas = document.createElement('option');
-  optionTodas.value = 'todas';
-  optionTodas.textContent = 'Todos los años';
-  fragment.append(optionTodas);
+  pasos.forEach((paso, index) => {
+    const node = template.content.cloneNode(true);
+    node.querySelector('.timeline__step').textContent = `Paso ${index + 1}`;
+    node.querySelector('.timeline__title').textContent = paso.titulo;
+    const description = node.querySelector('.timeline__description');
+    description.textContent = paso.descripcion;
 
-  years.forEach((year) => {
-    const option = document.createElement('option');
-    option.value = year;
-    option.textContent = year;
-    fragment.append(option);
-  });
+    if (paso.imagen) {
+      const figure = document.createElement('figure');
+      figure.className = 'timeline__media';
 
-  filterAnio.append(fragment);
-};
+      const img = document.createElement('img');
+      img.src = paso.imagen.src;
+      img.alt = paso.imagen.alt;
+      img.loading = 'lazy';
+      figure.append(img);
 
-const renderTabla = (data) => {
-  tableBody.innerHTML = '';
+      if (paso.imagen.caption) {
+        const caption = document.createElement('figcaption');
+        caption.textContent = paso.imagen.caption;
+        figure.append(caption);
+      }
 
-  if (!data.length) {
-    emptyState.hidden = false;
-    return;
-  }
-
-  emptyState.hidden = true;
-
-  const fragment = document.createDocumentFragment();
-
-  data.forEach((item) => {
-    const row = document.createElement('tr');
-    row.dataset.id = item.id;
-
-    row.innerHTML = `
-      <td>
-        <span class="periodo">${item.periodo}</span>
-        <p class="badge">${item.notas ? 'Con novedades' : 'Disponible'}</p>
-      </td>
-      <td>${item.fechaDeposito}</td>
-      <td>${formatCurrency(item.bruto)}</td>
-      <td>${formatCurrency(item.neto)}</td>
-      <td>
-        <button class="download-button" type="button" aria-label="Descargar liquidación de ${item.periodo}">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M7.5 12 12 16.5m0 0 4.5-4.5M12 16.5V3" />
-          </svg>
-          PDF
-        </button>
-      </td>
-    `;
-
-    row.addEventListener('click', () => mostrarDetalle(item.id));
-    fragment.append(row);
-  });
-
-  tableBody.append(fragment);
-};
-
-const renderResumen = (data) => {
-  if (!data.length) {
-    totalAcumuladoEl.textContent = '$0';
-    ultimoPeriodoEl.textContent = '—';
-    ultimoMontoEl.textContent = '$0';
-    promedioEl.textContent = '$0';
-    return;
-  }
-
-  const netos = data.map(({ neto }) => neto);
-  const total = netos.reduce((acc, value) => acc + value, 0);
-  const promedio = Math.round(total / data.length);
-
-  const [ultima] = [...data].sort((a, b) => b.id.localeCompare(a.id));
-
-  totalAcumuladoEl.textContent = formatCurrency(total);
-  ultimoPeriodoEl.textContent = ultima.periodo;
-  ultimoMontoEl.textContent = formatCurrency(ultima.neto);
-  promedioEl.textContent = formatCurrency(promedio);
-};
-
-const renderDetalle = (payslip) => {
-  const templateContent = detalleTemplate.content.cloneNode(true);
-
-  templateContent.querySelector('#detalle-periodo').textContent = payslip.periodo;
-  templateContent.querySelector('#detalle-fecha').textContent = `Depósito el ${payslip.fechaDeposito}`;
-  templateContent.querySelector('#detalle-bruto').textContent = formatCurrency(payslip.bruto);
-  templateContent.querySelector('#detalle-neto').textContent = formatCurrency(payslip.neto);
-
-  const asignacionesList = templateContent.querySelector('#detalle-asignaciones');
-  const descuentosList = templateContent.querySelector('#detalle-descuentos');
-
-  const createListItems = (items) => {
-    if (!items.length) {
-      const li = document.createElement('li');
-      li.textContent = 'Sin registros';
-      return [li];
+      description.insertAdjacentElement('afterend', figure);
     }
 
-    return items.map(({ concepto, monto }) => {
+    const tasksList = node.querySelector('.timeline__tasks');
+    paso.tareas.forEach((tarea) => {
       const li = document.createElement('li');
-      const spanConcepto = document.createElement('span');
-      spanConcepto.textContent = concepto;
-      const spanMonto = document.createElement('span');
-      spanMonto.textContent = formatCurrency(monto);
-      li.append(spanConcepto, spanMonto);
-      return li;
+      li.innerHTML = tarea;
+      tasksList.append(li);
     });
-  };
 
-  createListItems(payslip.asignaciones).forEach((li) => asignacionesList.append(li));
-  createListItems(payslip.descuentos).forEach((li) => descuentosList.append(li));
+    const notesBody = node.querySelector('.timeline__notes-body');
+    paso.notas.forEach((nota) => {
+      const p = document.createElement('p');
+      p.textContent = nota;
+      notesBody.append(p);
+    });
 
-  const link = templateContent.querySelector('#detalle-descarga');
-  link.href = payslip.archivo;
-  link.setAttribute('aria-label', `Descargar PDF de ${payslip.periodo}`);
-
-  detalleContenedor.replaceChildren(templateContent);
-};
-
-const mostrarDetalle = (id) => {
-  const payslip = payslips.find((item) => item.id === id);
-  if (!payslip) return;
-
-  renderDetalle(payslip);
-};
-
-const aplicarFiltros = () => {
-  const yearSelected = filterAnio.value;
-  const searchTerm = searchInput.value.trim().toLowerCase();
-
-  const filtered = payslips.filter((item) => {
-    const [, year] = item.periodo.split(' ');
-    const matchesYear = yearSelected === 'todas' || year === yearSelected;
-
-    const textoBuscado = [
-      item.periodo,
-      item.notas ?? '',
-      ...item.asignaciones.map((a) => a.concepto),
-      ...item.descuentos.map((d) => d.concepto)
-    ]
-      .join(' ')
-      .toLowerCase();
-
-    const matchesSearch = searchTerm === '' || textoBuscado.includes(searchTerm);
-
-    return matchesYear && matchesSearch;
+    fragment.append(node);
   });
 
-  renderTabla(filtered);
-  renderResumen(filtered);
-
-  if (filtered.length) {
-    mostrarDetalle(filtered[0].id);
-  } else {
-    detalleContenedor.innerHTML = '<p>Modifica los filtros para ver tus liquidaciones.</p>';
-  }
+  list.append(fragment);
 };
 
-const init = () => {
-  renderFiltros();
-  filterAnio.value = 'todas';
-  renderTabla(payslips);
-  renderResumen(payslips);
-  mostrarDetalle(payslips[0].id);
-
-  filterAnio.addEventListener('change', aplicarFiltros);
-  searchInput.addEventListener('input', aplicarFiltros);
-};
-
-init();
+renderTimeline();
